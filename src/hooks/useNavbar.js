@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react";
 
 export const useNavbar = () => {
   const Rutas = [
@@ -6,10 +6,11 @@ export const useNavbar = () => {
     ["Productos", "/productos"],
     ["Ventas", "/ventas"],
     ["Usuarios", "/usuarios"],
-  ]
-    return {
-        Rutas
-  }
-    
-  
-}
+  ];
+  const [abrir, setAbrir] = useState(false);
+  return {
+    Rutas,
+    abrir,
+    setAbrir,
+  };
+};
